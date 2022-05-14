@@ -1,31 +1,31 @@
-import './Navbar.css';
-export default function Navbar(){
+import React from "react";
+import { Link } from "react-scroll";
+
+export default function NavBar() {
     return (
-    <div className="navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">F. Carl Davis</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    </div>
+        <nav className="navBar">
+            <Link className="navLogo navBarLi" to='landingPage' smooth={true}>Logo</Link>
+            <div className="navBarText">
+                <ul>
+                    <Link className='navBarLi' to='landingPage' smooth={true}>
+                        Home
+                    </Link>
+                    <Link className="navBarLi" to='about' smooth={true}>
+                        About
+                    </Link>
+                    <Link className="navBarLi" to='projects' smooth={true}>
+                        Projects
+                    </Link>
+                    <Link className="navBarLi" to='contact' smooth={true}>
+                        Contact
+                    </Link>
+                    <a className="navBarLi resume" target='_blank'
+                        href="https://docs.google.com/document/d/1lHpxuNjKTjk4vCrzOzEkDnr2Bkw7ZxKu6qyUIMYaMEE/edit?usp=sharing" rel="noreferrer">
+                        Resume
+                    </a>
+                </ul>
+
+            </div>
+        </nav>
     )
 }
